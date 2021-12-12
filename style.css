@@ -1,0 +1,1076 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700");
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+*:not(img) {
+  -webkit-font-smoothing: antialiased;
+  backface-visibility: hidden;
+}
+
+body,
+#wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(65deg, #ffffff, #3498db, #000000);
+  box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.8);
+}
+body #profileContainer,
+#wrapper #profileContainer {
+  width: 1150px;
+  height: 750px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px inset rgba(214, 135, 32, 0.85);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+body #profileContainer #profileBubble,
+#wrapper #profileContainer #profileBubble {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: #3498db;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  top: 12.5%;
+  right: 2.5%;
+  position: Absolute;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  z-index: 5;
+}
+body #profileContainer #profileBubble:before,
+#wrapper #profileContainer #profileBubble:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: Absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 5% 0 5% 50%;
+  background: url(https://res.cloudinary.com/tercuman-b-l-m-merkez/image/upload/v1562344727/1_p2hfau.jpg);
+  opacity: 0.3;
+}
+body #profileContainer #profileBubble img:first-child,
+#wrapper #profileContainer #profileBubble img:first-child {
+  border-radius: 50%;
+  position: absolute;
+  max-width: 95%;
+  min-height: 95%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+}
+body #profileContainer #topSide,
+#wrapper #profileContainer #topSide {
+  width: 100%;
+  height: 32.5%;
+  background: url(https://res.cloudinary.com/tercuman-b-l-m-merkez/image/upload/v1638301858/responsivecomingsoon_ed5wod.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 60%;
+  position: relative;
+  -webkit-filter: brightness(155%);
+}
+body #profileContainer #topSide div#info,
+#wrapper #profileContainer #topSide div#info {
+  position: Absolute;
+  background: rgba(52, 152, 219, 0.3);
+  width: 100%;
+  bottom: 0;
+  display: Flex;
+  flex-flow: nowrap;
+  justify-content: flex-start;
+  -webkit-filter: brightness(85%);
+}
+body #profileContainer #topSide div#info i,
+#wrapper #profileContainer #topSide div#info i {
+  color: #000000;
+  font-size: 20px;
+  font-family: "Roboto Condensed";
+  position: absolute;
+  font-weight: 700;
+  right: 20%;
+  top: 50%;
+  transform: translate(0, -50%);
+  text-shadow: -1px -1px 2px #3498db, -2px -2px 4px #ffffff, 0 0 4px #ffffff;
+}
+body #profileContainer #topSide div#info i:before,
+#wrapper #profileContainer #topSide div#info i:before {
+  font-family: "FontAwesome";
+}
+body #profileContainer #topSide div#info .infoItem,
+#wrapper #profileContainer #topSide div#info .infoItem {
+  height: 50px;
+  width: 150px;
+  text-align: left;
+  font-family: "Roboto Condensed";
+  letter-spacing: 0.5px;
+  word-wrap: break-word;
+  color: #ffffff;
+  padding-left: 2%;
+  line-height: 10px;
+  text-shadow: 1px 1px 1px black, 2px 2px 2px darkslategrey;
+}
+body #profileContainer #topSide div#info .infoItem span,
+#wrapper #profileContainer #topSide div#info .infoItem span {
+  font-size: 23px;
+  line-height: 30px;
+}
+body #profileContainer #leftSide,
+#wrapper #profileContainer #leftSide {
+  width: 80%;
+  height: 60%;
+  display: flex;
+  flex-flow: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+body #profileContainer #leftSide #leftContent,
+#wrapper #profileContainer #leftSide #leftContent {
+  width: 70%;
+  height: 98%;
+  margin-top: 0.5%;
+  position: relative;
+  overflow: hidden;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider {
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  transition: all 0.75s cubic-bezier(0.8, -0.3, 0.2, 1.5);
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-flow: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider div.content,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider div.content {
+  width: 33%;
+  margin: 0 0.15% 0 0.15%;
+  height: 100%;
+  background: #F5F5F5;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #pictures,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #pictures {
+  padding-bottom: 5%;
+  background: transparent;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #pictures #gallery,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #pictures #gallery {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  font-size: 0;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  display: -webkit-box;
+  display: flex;
+  background: transparent;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #pictures #imageBox,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #pictures #imageBox {
+  -webkit-box-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  width: 200px;
+  min-height: 185px;
+  height: auto;
+  margin: 0.5vw;
+  background: rgba(0, 0, 0, 0.95);
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.75);
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #pictures #imageBox:before,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #pictures #imageBox:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(52, 152, 219, 0.05);
+  position: Absolute;
+  top: 0;
+  left: 0;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #pictures #imageBox:after,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #pictures #imageBox:after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #pictures #imageBox .galleryImage,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #pictures #imageBox .galleryImage {
+  width: 100%;
+  height: auto;
+  max-width: 605px;
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: middle;
+  transition: max-width 0.45s cubic-bezier(0.8, -0.3, 0.2, 0.5), border 0.3s ease;
+  cursor: pointer;
+  -webkit-filter: grayscale(0.5);
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #pictures #imageBox .popoutImage,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #pictures #imageBox .popoutImage {
+  position: fixed;
+  min-width: 30vw;
+  max-width: 85vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  -webkit-filter: brightness(105%) saturate(105%);
+  outline: 1000px solid rgba(0, 0, 0, 0.95);
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #pictures #imageBox .popoutImage + span,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #pictures #imageBox .popoutImage + span {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  border-radius: 50%;
+  background: white;
+  color: black;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #videos,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #videos {
+  display: flex;
+  flex-flow: nowrap;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList {
+  width: 25%;
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  background: transparent;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList span,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList span {
+  width: 95%;
+  height: 23%;
+  cursor: pointer;
+  outline: 2px solid #3498db;
+  margin: auto;
+  position: relative;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList span:before,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList span:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  transition: all 0.3s ease;
+  background: url(https://cdn0.iconfinder.com/data/icons/social-experiment-1/256/youtube-128.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 20%;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-filter: brightness(125%);
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList span:hover:before,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList span:hover:before {
+  opacity: 1;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList span:after,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList span:after {
+  content: "";
+  font-size: 12px;
+  font-family: "Roboto Condensed";
+  position: absolute;
+  padding: 5.5px;
+  background: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  right: 0;
+  color: #ffffff;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList span:nth-child(1),
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList span:nth-child(1) {
+  background: url(https://res.cloudinary.com/tercuman-b-l-m-merkez/image/upload/v1638976251/1v_x9alld.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList span:nth-child(1):after,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList span:nth-child(1):after {
+  content: "▶️ 1:25";
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList span:nth-child(2),
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList span:nth-child(2) {
+  background: url(https://res.cloudinary.com/tercuman-b-l-m-merkez/image/upload/v1638976430/2v_wvsddu.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList span:nth-child(2):after,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList span:nth-child(2):after {
+  content: "▶️ 2:52";
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList span:nth-child(3),
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList span:nth-child(3) {
+  background: url(https://res.cloudinary.com/tercuman-b-l-m-merkez/image/upload/v1638976575/3v_ryx4v7.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList span:nth-child(3):after,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList span:nth-child(3):after {
+  content: "▶️ 2:05";
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList span:nth-child(4),
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList span:nth-child(4) {
+  background: url(https://res.cloudinary.com/tercuman-b-l-m-merkez/image/upload/v1638976694/4v_z8d2jr.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList span:nth-child(4):after,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #videos #videoList span:nth-child(4):after {
+  content: "▶️ 2:15";
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #videos #player,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #videos #player {
+  width: 73%;
+  height: 98%;
+  margin: Auto;
+  margin-top: 0.5%;
+  outline: 2px solid #3498db;
+  background: #000000;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #videos #iframeLoader,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #videos #iframeLoader {
+  position: absolute;
+  width: 73%;
+  height: 98%;
+  background: linear-gradient(-90deg, rgba(204, 78, 69, 0.75), rgba(0, 0, 0, 0.75), rgba(51, 158, 146, 0.75));
+  z-index: 9999;
+  right: 0.9%;
+  box-shadow: inset 0 0 150px #000000;
+  bottom: -100%;
+  transition: all 0.55s cubic-bezier(0.8, -0.3, 0.5, 1.5);
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #videos #iframeLoader span,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #videos #iframeLoader span {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 42px;
+  -webkit-filter: brightness(125%);
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #videos #iframeLoader span:first-child,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #videos #iframeLoader span:first-child {
+  font-family: "Open Sans";
+  margin-top: 35%;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #videos #iframeLoader span:last-child,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #videos #iframeLoader span:last-child {
+  margin-top: 5%;
+  margin-right: 5%;
+  font-size: 40px;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #videos .activeIframe,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #videos .activeIframe {
+  bottom: 1% !important;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #blog,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #blog {
+  overflow-y: scroll;
+  background: url(http://img01.deviantart.net/5e6e/i/2010/201/8/a/rice_paper_texture_by_maplerose_stock.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #blog h4,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #blog h4 {
+  font-size: 10px;
+  font-weight: 300;
+  padding: 5px;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #blog p,
+body #profileContainer #leftSide #leftContent #mainContentSlider #blog h1,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #blog p,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #blog h1 {
+  padding: 25px 25px 0 25px;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #blog h1,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #blog h1 {
+  font-weight: Bold;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-family: "Roboto Condensed";
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #blog p,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #blog p {
+  text-indent: 50px;
+  line-height: 18px;
+  font-family: "Open Sans";
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #blog p:last-child,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #blog p:last-child {
+  padding-bottom: 25px;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #blog .wrap,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #blog .wrap {
+  width: auto;
+  max-width: 250px;
+  margin: 100px auto;
+  text-align: center;
+  -webkit-filter: brightness(120%);
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #blog .wrap .social,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #blog .wrap .social {
+  font-size: 2.5em;
+  height: 50px;
+  overflow: hidden;
+  border-bottom: 1px solid #abc;
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: space-between;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #blog .wrap .social .i,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #blog .wrap .social .i {
+  position: relative;
+  cursor: pointer;
+  top: 30px;
+  padding: 0 10px;
+  z-index: 9999;
+  display: block;
+  -webkit-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+  -ms-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+  /* ease-in-out */
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #blog .wrap .social .i::before,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #blog .wrap .social .i::before {
+  cursor: pointer;
+  text-shadow: 0.5px 0.5px 0.5px #777;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #blog .wrap .social .i:hover,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #blog .wrap .social .i:hover {
+  top: 5px;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #blog .wrap .social .i:hover::before,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #blog .wrap .social .i:hover::before {
+  -webkit-animation: wiggle 0.3s infinite;
+  animation: wiggle 0.3s infinite;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #blog .wrap .social .fb,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #blog .wrap .social .fb {
+  color: #3B5998;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #blog .wrap .social .tw,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #blog .wrap .social .tw {
+  color: #09AEEC;
+}
+body #profileContainer #leftSide #leftContent #mainContentSlider #blog .wrap .social .yt,
+#wrapper #profileContainer #leftSide #leftContent #mainContentSlider #blog .wrap .social .yt {
+  color: #AA2A25;
+}
+body #profileContainer #leftSide #rightContent,
+#wrapper #profileContainer #leftSide #rightContent {
+  width: 29%;
+  height: 98%;
+  margin-top: 0.5%;
+  background: white;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #header,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #header {
+  width: 100%;
+  position: relative;
+  height: 65px;
+  background: radial-gradient(#458eff 1%, #125688);
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #header img,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #header img {
+  max-width: 35%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #header i.fa-refresh,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #header i.fa-refresh {
+  color: #ffffff;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  cursor: pointer;
+  font-size: 18px;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #feedHead,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #feedHead {
+  height: 40px;
+  position: relative;
+  font-size: 11px;
+  color: #458eff;
+  font-weight: 700;
+  font-family: "Open Sans";
+  letter-spacing: 0.25px;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #feedHead img,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #feedHead img {
+  border-radius: 50%;
+  max-height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translate(0, -50%);
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #feedHead i,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #feedHead i {
+  color: #1B1F24;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translate(0, -70%);
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #feedHead:before,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #feedHead:before {
+  content: "Snake Plissken";
+  position: absolute;
+  top: 30%;
+  left: 18%;
+  transform: translate(0, -50%);
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #feedHead:after,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #feedHead:after {
+  content: " Disney Land";
+  font-family: "FontAwesome";
+  position: absolute;
+  top: 65%;
+  left: 18%;
+  transform: translate(0, -50%);
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #feedBody img,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #feedBody img {
+  max-width: 100%;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #feedFoot,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #feedFoot {
+  height: 35px;
+  position: relative;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #feedFoot:after,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #feedFoot:after {
+  content: "";
+  width: 85%;
+  height: 100%;
+  position: Absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-bottom: 1px solid #dddddd;
+  pointer-events: none;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #feedFoot #footControls,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #feedFoot #footControls {
+  width: 100%;
+  height: 100%;
+  color: #7E8085;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #feedFoot #footControls i,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #feedFoot #footControls i {
+  cursor: pointer;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #feedFoot #footControls i.fa-heart,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #feedFoot #footControls i.fa-heart {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translate(0, -50%);
+  color: red;
+  -webkit-filter: brightness(85%);
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #feedFoot #footControls i.fa-comment-o,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #feedFoot #footControls i.fa-comment-o {
+  position: absolute;
+  top: 50%;
+  left: 12%;
+  transform: translate(0, -50%) rotateY(180deg);
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #feedFoot #footControls #optionsBox,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #feedFoot #footControls #optionsBox {
+  position: absolute;
+  right: 7%;
+  top: 35%;
+  font-size: 5px;
+  letter-spacing: 1px;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #likesSection,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #likesSection {
+  width: 100%;
+  height: 50px;
+  font-size: 9px;
+  color: #125688;
+  position: relative;
+  font-family: "Open Sans";
+  font-weight: 700;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #likesSection i.fa.fa-heart,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #likesSection i.fa.fa-heart {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #likesSection #comment,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #likesSection #comment {
+  position: absolute;
+  top: 55%;
+  left: 5%;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #likesSection #comment p:first-child span,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #likesSection #comment p:first-child span {
+  font-weight: 400;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #likesSection #comment p:last-child,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #likesSection #comment p:last-child {
+  color: #7E8085;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #likesSection #comment i,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #likesSection #comment i {
+  padding: 0 0 0 3px;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare {
+  width: auto;
+  margin: auto;
+  display: flex;
+  flex-flow: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 25px 15px 0 5px;
+  font-size: 30px;
+  position: relative;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare:before,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare:before {
+  content: "";
+  width: 85%;
+  height: 100%;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-top: 1px solid #dddddd;
+  pointer-events: none;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a {
+  cursor: pointer;
+  transition: all 0.09s linear;
+  border-radius: 5px;
+  height: 25px;
+  width: 25px;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(1),
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(1) {
+  color: #4060A5;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(1):hover,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(1):hover {
+  background: #4060A5;
+  color: #ffffff;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(1):before,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(1):before {
+  margin-top: -3px;
+  margin-left: -0.5px;
+  display: block;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(2),
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(2) {
+  color: #00aced;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(2):hover,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(2):hover {
+  background: #00aced;
+  color: #ffffff;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(2):before,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(2):before {
+  margin-top: -3px;
+  margin-left: -0.5px;
+  display: block;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(3),
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(3) {
+  color: #000000;
+  width: 26px;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(3):hover,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(3):hover {
+  background: #000000;
+  color: #ffffff;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(3):before,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(3):before {
+  margin-top: -3px;
+  display: block;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(4),
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(4) {
+  color: #fffc00;
+  background: #000000;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(4):hover,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(4):hover {
+  background: #fffc00;
+  color: #000000;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(4):before,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(4):before {
+  margin-top: -3px;
+  margin-left: -0.5px;
+  display: block;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(5),
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(5) {
+  color: #dd4b39;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(5):hover,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(5):hover {
+  background: #dd4b39;
+  color: #ffffff;
+}
+body #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(5):before,
+#wrapper #profileContainer #leftSide #rightContent #instagramFeed #feed #socialMediaShare a:nth-child(5):before {
+  margin-top: -3px;
+  margin-left: -0.5px;
+  display: block;
+}
+body #profileContainer #rightSide,
+#wrapper #profileContainer #rightSide {
+  width: 20%;
+  height: 60%;
+  position: relative;
+}
+body #profileContainer #rightSide #rightSideInner,
+#wrapper #profileContainer #rightSide #rightSideInner {
+  height: 98%;
+  width: 98%;
+  background: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body #profileContainer #rightSide #rightSideInner #name,
+#wrapper #profileContainer #rightSide #rightSideInner #name {
+  font-family: "Roboto Condensed";
+  padding: 7.5px;
+  margin-top: 10%;
+  text-align: center;
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  -webkit-filter: brightness(115%);
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.6), 0 3px 5px rgba(0, 0, 0, 0.4), 0 5px 10px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.4), 0 20px 20px rgba(0, 0, 0, 0.3);
+}
+body #profileContainer #rightSide #rightSideInner #twitterHead,
+#wrapper #profileContainer #rightSide #rightSideInner #twitterHead {
+  background: linear-gradient(#ffffff 15%, #00aced);
+  height: 50px;
+  width: 100%;
+}
+body #profileContainer #rightSide #rightSideInner #twitterHead p,
+#wrapper #profileContainer #rightSide #rightSideInner #twitterHead p {
+  color: #ffffff;
+  width: 100%;
+  height: 50px;
+  line-height: 60px;
+  text-align: center;
+  font-family: "Open Sans";
+  font-weight: 700;
+  text-shadow: 1px 1px 2px #1B1F24;
+  letter-spacing: 0.5px;
+}
+body #profileContainer #rightSide #rightSideInner #twitterBody,
+#wrapper #profileContainer #rightSide #rightSideInner #twitterBody {
+  display: Flex;
+  flex-flow: row wrap;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body #profileContainer #rightSide #rightSideInner #twitterBody .tweet,
+#wrapper #profileContainer #rightSide #rightSideInner #twitterBody .tweet {
+  height: 95px;
+  width: 95%;
+  border: 1px solid #00aced;
+  padding-right: 1px;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 10px;
+  display: Flex;
+  flex-flow: row wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+body #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twt,
+#wrapper #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twt {
+  height: 40%;
+  width: 100%;
+}
+body #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twt img,
+#wrapper #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twt img {
+  max-height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  margin: 5px 0 0 5px;
+  float: left;
+}
+body #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twt p,
+#wrapper #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twt p {
+  font-size: 12px;
+  font-family: "Roboto Condensed";
+  height: auto;
+  padding-top: 10px;
+  padding-left: 40px;
+  line-height: 12px;
+  font-weight: 700;
+  position: relative;
+}
+body #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twt p i,
+#wrapper #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twt p i {
+  font-weight: 400;
+  font-size: 10px;
+}
+body #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twt p img,
+#wrapper #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twt p img {
+  width: 10px;
+  position: absolute;
+  top: 6px;
+  left: 110px;
+}
+body #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twm,
+#wrapper #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twm {
+  height: 40%;
+  width: 100%;
+}
+body #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twm p,
+body #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twm span,
+#wrapper #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twm p,
+#wrapper #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twm span {
+  font-size: 10.5px;
+  font-family: "Roboto Condensed";
+  height: 50%;
+  padding-left: 7px;
+  padding-right: 2px;
+}
+body #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twm p,
+#wrapper #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twm p {
+  padding-top: 5px;
+}
+body #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twm span,
+#wrapper #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twm span {
+  font-size: 10px;
+  line-height: 20px;
+  display: block;
+}
+body #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twb,
+#wrapper #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twb {
+  color: #7E8085;
+  font-size: 11px;
+  line-height: 20px;
+  height: 20%;
+  width: 100%;
+}
+body #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twb .fa,
+#wrapper #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twb .fa {
+  margin-left: 7.5px;
+  cursor: pointer;
+}
+body #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twb .fa:hover,
+#wrapper #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twb .fa:hover {
+  color: #00aced;
+}
+body #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twb .fa:hover > span,
+#wrapper #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twb .fa:hover > span {
+  color: #7E8085;
+}
+body #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twb .fa span,
+#wrapper #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twb .fa span {
+  font-family: "Roboto Condensed";
+  font-size: 10px;
+  margin-left: 3px;
+}
+body #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twb .fa-star:hover,
+#wrapper #profileContainer #rightSide #rightSideInner #twitterBody .tweet .twb .fa-star:hover {
+  color: gold;
+}
+body #profileContainer #bottomSide,
+#wrapper #profileContainer #bottomSide {
+  width: 100%;
+  height: 7.5%;
+  background: #000000;
+  color: #ffffff;
+  display: flex;
+  flex-flow: nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+}
+body #profileContainer #bottomSide #follow,
+#wrapper #profileContainer #bottomSide #follow {
+  position: absolute;
+  height: 50%;
+  line-height: 25px;
+  font-family: "Roboto Condensed";
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px black, 2px 2px 2px darkslategrey;
+  cursor: pointer;
+  right: 0;
+  top: 0;
+  transform: translate(-27%, 50%);
+  width: 150px;
+  text-align: Center;
+  background: #3498db;
+  box-shadow: 0 3px 0 rgba(52, 152, 219, 0.7);
+  -webkit-filter: brightness(115%);
+  outline: none;
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  transition: all 0.05s linear;
+}
+body #profileContainer #bottomSide #follow:active,
+#wrapper #profileContainer #bottomSide #follow:active {
+  box-shadow: none;
+  transform: translate(-27%, 54%);
+}
+body #profileContainer #bottomSide #follow:before,
+#wrapper #profileContainer #bottomSide #follow:before {
+  font-family: "FontAwesome";
+  font-size: 15px;
+  color: #00aced;
+  margin-left: -5px;
+  margin-right: 10px;
+  text-shadow: 0 0 4px #1B1F24;
+}
+body #profileContainer #bottomSide .navItem,
+#wrapper #profileContainer #bottomSide .navItem {
+  width: 170px;
+  height: 100%;
+  font-family: "Roboto Condensed";
+  text-transform: uppercase;
+  line-height: 60px;
+  font-size: 20px;
+  text-align: Center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin: 0 2% 0 2%;
+  text-shadow: 1px 1px 1px black, 2px 2px 2px darkslategrey, 3px 3px 3px black;
+}
+body #profileContainer #bottomSide .navItem:hover,
+#wrapper #profileContainer #bottomSide .navItem:hover {
+  background: rgba(46, 204, 113, 0.7);
+  -webkit-filter: brightness(115%);
+}
+body #profileContainer #bottomSide .navItem.active,
+#wrapper #profileContainer #bottomSide .navItem.active {
+  background: rgba(52, 152, 219, 0.7);
+  -webkit-filter: brightness(115%);
+}
+
+.scroll-pane {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.jspVerticalBar {
+  width: 10px;
+}
+
+.jspDrag {
+  background: #4060A5;
+}
+
+@-webkit-keyframes wiggle {
+  0% {
+    -webkit-transform: rotateZ(2deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(-2deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(2deg);
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+
+/* Profile Link */
+.button.me {
+  width: 80px;
+  height: 80px;
+  padding: 5px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  opacity: 0.25;
+  transition: all 0.5s ease;
+}
+.button.me:hover {
+  opacity: 1;
+}
+.button.me:before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  display: block;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/306669/profile/profile-80_7.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  line-height: 20px;
+  z-index: 9999;
+  color: whitesmoke;
+  border-radius: 5px 50% 50% 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.button.me:After {
+  content: "🍕";
+  display: block;
+  position: fixed;
+  line-height: 30px;
+  text-align: right;
+  padding-right: 1px;
+  width: 60%;
+  height: 100%;
+  top: 0;
+  right: -15%;
+  background: #c0392b;
+  border-radius: 0 5px 5px 0;
+  z-index: -1;
+  color: #16a085;
+}
